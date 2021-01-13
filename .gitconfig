@@ -1,0 +1,26 @@
+[user]
+	name = NAME
+	email = E@MAIL.com
+[core]
+	autocrlf = true
+		editor = \"PATH_TO_ATOM\\atom.exe\" --wait
+[push]
+	default = simple
+[Alias]
+	cm = commit
+	co = checkout
+	st = status
+	bd = !git branch -d
+  mnf = !git merge --no-ff
+	pur = !git push -u origin
+	sli = !git stash list
+	shw = !git stash show
+	sap = !git stash apply
+	up = !git fetch origin && git rebase origin/master
+	back = !git reset HEAD~1 --soft
+	stove = !git reset HEAD~1 --soft && git stash save
+	dropone = !git reset HEAD~1 --hard
+[rerere]
+	enabled = true
+[gui]
+	recentrepo = LAST_GIT_REPO
