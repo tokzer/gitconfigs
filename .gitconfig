@@ -3,15 +3,24 @@
 	email = E@MAIL.com
 [core]
 	autocrlf = true
-		editor = \"PATH_TO_ATOM\\atom.exe\" --wait
+	editor = \"PATH_TO_ATOM\\atom.exe\" --wait
+[http "ADRESS_TOGIT_IF_NEEDED"]
+	proxy = PROXY_ADRESS
+[https]
+	proxy = PROXY_ADRESS
 [push]
 	default = simple
 [Alias]
+	p4 = !/C/Python27/python.exe 'PATH_TO_GIT\\git-core\\git-p4'
 	cm = commit
 	co = checkout
 	st = status
+	sw = switch
+	get = fetch
 	bd = !git branch -d
-  mnf = !git merge --no-ff
+	lo = !git log -5 --pretty=fuller
+	lone = !git log -n20 --oneline --graph
+	mnf = !git merge --no-ff
 	pur = !git push -u origin
 	sli = !git stash list
 	shw = !git stash show
@@ -20,7 +29,14 @@
 	back = !git reset HEAD~1 --soft
 	stove = !git reset HEAD~1 --soft && git stash save
 	dropone = !git reset HEAD~1 --hard
+	unstage = !git rm --cached
 [rerere]
 	enabled = true
 [gui]
 	recentrepo = LAST_GIT_REPO
+[log]
+	date = relative
+[format]
+	pretty = shortlog
+[pretty]
+	shortlog = format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,brightblue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
