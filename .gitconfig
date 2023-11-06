@@ -3,7 +3,7 @@
 	email = E@MAIL.com
 [core]
 	autocrlf = true
-	editor = \"PATH_TO_ATOM\\atom.exe\" --wait
+	editor = code --wait
 [http "ADRESS_TOGIT_IF_NEEDED"]
 	proxy = PROXY_ADRESS
 [https]
@@ -14,18 +14,27 @@
 	p4 = !/C/Python27/python.exe 'PATH_TO_GIT\\git-core\\git-p4'
 	cm = commit
 	co = checkout
+	me = merge
 	st = status
 	sw = switch
 	get = fetch
+	pu = pull
 	bd = !git branch -d
-	lo = !git log -5 --pretty=fuller
-	lone = !git log -n20 --oneline --graph
+	l5 = !git log -n5
+	l10 = !git log -n10
+	l50 = !git log -n50
+	lofu = !git log -5 --pretty=fuller
+	lal30 = !git log -n30 --oneline --graph --all
+	lal5 = !git log -n5 --oneline --graph --all
 	mnf = !git merge --no-ff
 	pur = !git push -u origin
 	sli = !git stash list
 	shw = !git stash show
 	sap = !git stash apply
+	stat = !git get && git st && git lal5
 	up = !git fetch origin && git rebase origin/master
+	mast = !git switch master
+	recont = !git rebase --continue
 	back = !git reset HEAD~1 --soft
 	stove = !git reset HEAD~1 --soft && git stash save
 	dropone = !git reset HEAD~1 --hard
