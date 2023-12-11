@@ -22,10 +22,13 @@
 	bd = !git branch -d
 	l5 = !git log -n5
 	l10 = !git log -n10
+	l20 = !git log -n20
+	l30 = !git log -n30
+	l40 = !git log -n40
 	l50 = !git log -n50
-	lofu = !git log -5 --pretty=fuller
-	lal30 = !git log -n30 --oneline --graph --all
+	lofu = !git log -10 --pretty=fuller
 	lal5 = !git log -n5 --oneline --graph --all
+	lal30 = !git log -n30 --oneline --graph --all
 	mnf = !git merge --no-ff
 	pur = !git push -u origin
 	sli = !git stash list
