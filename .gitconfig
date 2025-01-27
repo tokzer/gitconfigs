@@ -2,6 +2,7 @@
 	name = NAME
 	email = E@MAIL.com
 [core]
+	editor = code --wait
 	autocrlf = true
 	editor = code --wait
 [http "ADRESS_TOGIT_IF_NEEDED"]
@@ -19,6 +20,7 @@
 	sw = switch
 	get = fetch
 	pu = pull
+	pal = !git pull --all
 	bd = !git branch -d
 	l5 = !git log -n5
 	l10 = !git log -n10
@@ -34,9 +36,12 @@
 	sli = !git stash list
 	shw = !git stash show
 	sap = !git stash apply
+	find = log --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
 	stat = !git get && git st && git lal5
-	up = !git fetch origin && git rebase origin/master
-	mast = !git switch master
+	upst = !git fetch origin && git rebase origin/master
+	upin = !git fetch origin && git rebase origin/main
+	smat = !git switch master
+	sman = !git switch main
 	recont = !git rebase --continue
 	back = !git reset HEAD~1 --soft
 	stove = !git reset HEAD~1 --soft && git stash save
